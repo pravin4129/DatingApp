@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { JwtModule } from '@auth0/angular-jwt';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
-
+import { FileUploadModule } from 'ng2-file-upload';
 
 import { AppComponent } from './app.component';
 import { ValueComponent } from './value/value.component';
@@ -24,6 +24,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { appRoute } from './routes';
 import { MemberCardComponent } from './members/member-card/member-card.component';
 import { MemberDetailComponent } from './members/member-detail/member-detail.component';
+import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component'
 import { MemberDetailResolver } from './_resolvers/member-detail-resolver';
 import { MemberListResolver } from './_resolvers/member-list-resolver';
 import { MemberEditResolver } from './_resolvers/member-edit-resolver';
@@ -48,7 +49,8 @@ export function fnTokenGetter(){
       MessagesComponent,
       MemberCardComponent,
       MemberDetailComponent,
-      MemberEditComponent
+      MemberEditComponent,
+      PhotoEditorComponent
    ],
    imports: [
       BrowserModule,
@@ -59,6 +61,7 @@ export function fnTokenGetter(){
       TabsModule.forRoot(),
       RouterModule.forRoot(appRoute),
       NgxGalleryModule,
+      FileUploadModule,
       JwtModule.forRoot({
          config: {
             tokenGetter: fnTokenGetter,
