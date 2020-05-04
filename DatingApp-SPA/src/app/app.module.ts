@@ -32,6 +32,7 @@ import { MemberEditResolver } from './_resolvers/member-edit-resolver';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
 import { AuthGuard } from './_guards/auth.guard';
 import { AlertifyService } from './_services/alertify.service';
+import { DateAgoPipe } from './pipes/date-ago.pipe';
 
 
 export function fnTokenGetter(){
@@ -51,7 +52,8 @@ export function fnTokenGetter(){
       MemberCardComponent,
       MemberDetailComponent,
       MemberEditComponent,
-      PhotoEditorComponent
+      PhotoEditorComponent,
+      DateAgoPipe
    ],
    imports: [
       BrowserModule,
@@ -88,4 +90,5 @@ export function fnTokenGetter(){
       AppComponent
    ]
 })
+
 export class AppModule { }

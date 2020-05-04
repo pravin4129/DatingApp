@@ -4,6 +4,7 @@ import { UserService } from 'src/app/_services/user.service';
 import { ActivatedRoute } from '@angular/router';
 import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation } from '@kolkov/ngx-gallery';
 
+
 @Component({
   selector: 'app-member-detail',
   templateUrl: './member-detail.component.html',
@@ -54,6 +55,6 @@ export class MemberDetailComponent implements OnInit {
   //          }, error => {
   //            this.alertify.error(error);
   //          } );
-  //}
+  // }
 
 }
