@@ -35,6 +35,7 @@ import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
 import { AuthGuard } from './_guards/auth.guard';
 import { AlertifyService } from './_services/alertify.service';
 import { DateAgoPipe } from './pipes/date-ago.pipe';
+import { ListsResolver } from './_resolvers/lists-resolver';
 
 
 export function fnTokenGetter(){
@@ -88,7 +89,8 @@ export function fnTokenGetter(){
       MemberEditResolver,
       AuthGuard,
       AlertifyService,
-      PreventUnsavedChanges
+      PreventUnsavedChanges,
+      ListsResolver
    ],
    bootstrap: [
       AppComponent
