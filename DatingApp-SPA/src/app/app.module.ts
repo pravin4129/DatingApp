@@ -22,6 +22,7 @@ import { RegisterComponent } from './register/register.component';
 import { ErrorInterceptorProvider } from './_services/error.interceptor';
 import { MemberListComponent } from './members/member-list/member-list.component';
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
+import { MemberMessagesComponent } from './members/member-messages/member-messages.component';
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 import { appRoute } from './routes';
@@ -36,7 +37,7 @@ import { AuthGuard } from './_guards/auth.guard';
 import { AlertifyService } from './_services/alertify.service';
 import { DateAgoPipe } from './pipes/date-ago.pipe';
 import { ListsResolver } from './_resolvers/lists-resolver';
-
+import { MessagesResolver } from './_resolvers/messages-resolver';
 
 export function fnTokenGetter(){
    return localStorage.getItem('token');
@@ -50,6 +51,7 @@ export function fnTokenGetter(){
       HomeComponent,
       RegisterComponent,
       MemberListComponent,
+      MemberMessagesComponent,
       ListsComponent,
       MessagesComponent,
       MemberCardComponent,
@@ -90,7 +92,8 @@ export function fnTokenGetter(){
       AuthGuard,
       AlertifyService,
       PreventUnsavedChanges,
-      ListsResolver
+      ListsResolver,
+      MessagesResolver
    ],
    bootstrap: [
       AppComponent
